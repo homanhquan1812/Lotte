@@ -38,6 +38,7 @@ public class DocumentController {
 
     private final DocumentService documentService;
 
+    // [GET] /api/v1/document?...=...&...=...
     @Operation(summary = "Get documents with pagination")
     @GetMapping
     public PageResponse<DocumentResponseDto> getPage(
@@ -66,6 +67,7 @@ public class DocumentController {
         );
     }
 
+    // [GET] /api/v1/document/{id}
     @Operation(summary = "Get a document by id")
     @GetMapping("/{id}")
     public DocumentResponseDto getById(
@@ -75,6 +77,7 @@ public class DocumentController {
         return documentService.getById(id, currentUser);
     }
 
+    // [POST] /api/v1/document
     @Operation(summary = "Create a document")
     @PostMapping
     public DocumentResponseDto create(
@@ -84,6 +87,7 @@ public class DocumentController {
         return documentService.create(request, currentUser);
     }
 
+    // [PATCH] /api/v1/document/{id}
     @Operation(summary = "Update a document")
     @PatchMapping("/{id}")
     public DocumentResponseDto update(
@@ -94,6 +98,7 @@ public class DocumentController {
         return documentService.update(id, requestDto, currentUser);
     }
 
+    // [DELETE] /api/v1/document/{id}
     @Operation(summary = "Delete a document (ADMIN only)")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
@@ -101,6 +106,7 @@ public class DocumentController {
         return ResponseEntity.noContent().build();
     }
 
+    // [GET] /api/v1/document/reports/status-count
     @Operation(summary = "Count documents grouped by status")
     @GetMapping("/reports/status-count")
     public List<StatusCountResponseDto> countByStatus() {
