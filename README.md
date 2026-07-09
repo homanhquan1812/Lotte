@@ -5,7 +5,7 @@
 
 # How to run
 Run `mvn clean install`.
-Connect to PostgreSQL with both username and password are `postgres`.
+Connect to PostgreSQL with both username and password are `postgres`, database's name is `lotte`.
 Account Info:
 - ADMIN -> username `admin` & password `admin123`.
 - STAFF -> username `staff1` & password `staff123`.
