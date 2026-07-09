@@ -30,7 +30,7 @@ public class UserController {
 
     private final UserService userService;
 
-    // [GET] /api/user?...=...&...=...
+    // [GET] /api/v1/user?...=...&...=...
     @Operation(summary = "Get users with pagination")
     @GetMapping
     public PageResponse<UserResponseDto> getPage(
@@ -57,14 +57,14 @@ public class UserController {
         return userService.getPage(pageable);
     }
 
-    // [GET] /api/user/{userId}
+    // [GET] /api/v1/user/{userId}
     @Operation(summary = "Get user by ID")
     @GetMapping("/{userId}")
     public UserResponseDto getById(@PathVariable @Min(1) Long userId) {
         return userService.getById(userId);
     }
 
-    // [POST] /api/user
+    // [POST] /api/v1/user
     @PostMapping
     @Operation(summary = "Create new user")
     @ResponseStatus(HttpStatus.CREATED)
@@ -74,7 +74,7 @@ public class UserController {
         return userService.create(requestDto);
     }
 
-    // [PATCH] /api/user/{userId}
+    // [PATCH] /api/v1/user/{userId}
     @Operation(summary = "Update user by ID")
     @PatchMapping("/{userId}")
     public UserResponseDto update(
@@ -83,7 +83,7 @@ public class UserController {
         return userService.update(userId, requestDto);
     }
 
-    // [DELETE] /api/user/{userId}
+    // [DELETE] /api/v1/user/{userId}
     @Operation(summary = "Delete user permanently by ID")
     @DeleteMapping("/{userId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
