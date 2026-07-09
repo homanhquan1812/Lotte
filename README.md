@@ -5,6 +5,7 @@
 
 # How to run
 Run `mvn clean install`.
+Connect to PostgreSQL with both username and password are `postgres`.
 
 # Endpoints
 - [POST] /api/v1/auth/login: Login.
