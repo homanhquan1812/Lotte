@@ -1,6 +1,6 @@
 # Tech Stack
 - Java 17.
-- Spring Boot, Security (JWT), Data JPA, PostgreSQL, MapStruct, Lombok, Maven, Flyway.
+- Spring Boot v4.10, Security (JWT), Data JPA, PostgreSQL, MapStruct, Lombok, Maven, Flyway.
 - Monolithic Architecture.
 
 # How to run
