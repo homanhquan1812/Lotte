@@ -1,11 +1,14 @@
 # Tech Stack
 - Java 17.
-- Spring Boot, Security (JWT), Data JPA, PostgreSQL, MapStruct, Lombok, Maven
+- Spring Boot, Security (JWT), Data JPA, PostgreSQL, MapStruct, Lombok, Maven, Flyway.
 - Monolithic Architecture.
 
 # How to run
 Run `mvn clean install`.
 Connect to PostgreSQL with both username and password are `postgres`.
+Account Info:
+- ADMIN -> username `admin` & password `admin123`.
+- STAFF -> username `staff1` & password `staff123`.
 
 # Endpoints
 - [POST] /api/v1/auth/login: Login.
@@ -23,4 +26,3 @@ Connect to PostgreSQL with both username and password are `postgres`.
 
 # Functions not yet implemented
 - File upload/attachment for a document.
-- 1-2 unit tests.
