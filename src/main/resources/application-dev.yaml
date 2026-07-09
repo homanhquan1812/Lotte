@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lotte
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+jwt:
+  secret: "Z4uT3x9pR2mF8aC7yWqK5nD1vB6sL0hJtP3rX8cE2qY9zG4wM1fV7oU5jN6iT0"
+
+logging:
+  level:
+    root: INFO
+    com.example.lotte: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.flywaydb.core: INFO
